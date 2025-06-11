@@ -2,8 +2,6 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HotelController;
 
-Route::get('/user', function (Request $request) {
-    dd(1233);
-    return $request->user();
-})->middleware('auth:sanctum');
+Route::get('/room/combinations', [HotelController::class , 'show']);
